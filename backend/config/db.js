@@ -8,7 +8,22 @@ export const connectDb = async () => {
 
 
 
-    await mongoose.connect('mongodb://localhost:27017/ORDEROFFOOD',{
+//     await mongoose.connect('mongodb://localhost:27017/ORDEROFFOOD',{
+//         useNewUrlParser:true,
+//         useUnifiedTopology:true,
+//     })
+//     .then(()=>{
+//         console.log("db connected");
+//     })
+//     .catch((err)=>{
+//         console.log(err);
+//         console.log("db not connected")
+//     })
+// }
+
+
+
+    await mongoose.connect('mongodb+srv://punaldhiman1017_db_user:RcG2UdzAS1WIBnOK@cluster0.kbktx6v.mongodb.net/?appName=Cluster0',{
         useNewUrlParser:true,
         useUnifiedTopology:true,
     })
@@ -20,3 +35,4 @@ export const connectDb = async () => {
         console.log("db not connected")
     })
 }
+
